@@ -2,11 +2,15 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
-- 2.5.1
+  - 2.6.6
 
 install:
   # Install Jekyll and dependencies
   - bundle install
+
+before_script:
+  - git config --global user.email "fullbloomh3ck@gmail.com"
+  - git config --global user.name "seonghbae"
 
 script: bundle exec rake site:deploy --quiet #--trace
 
@@ -17,7 +21,14 @@ script: bundle exec rake site:deploy --quiet #--trace
 # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
 env:
   global:
-    secure: "hGpEWbQXMoZDTKAyG4AEKT/Q8CzjJ7TAT4ZDKDmYsIeDjw9IYLVpG9dMArpguHP9eHzcZn1sX/WTWLm8d1fdBGZgUXcKOXb1b8SFKd/A9SNJhIAYlpW9xde6LgUpbOywFfbH93+vkXGiHTxbvdf5ESRrYD8wGGgTKSUAv7/2IPaA9Ea3JX2XMT0v4MIAIndat5SDrcjgLasHev7P8hQo8k4Rjx94axbJUHKImDPl+sAwCtrD3kWikAGwcrnBNoaYw8QBj6tG3XH4RbAbSu4U5GKABOBJNbSq5R9W7jdvTY81oxH/PWTOeIeQBQQk+ekRrtb/GTdVBrLVuevs++63EW5OEARZJCpLLliD/NszhuxNHh7PgNJvO4rLjnxZk3b/QbjbNXzsACFKI0WU0PEaYeGxNB+2oVRuMyw4gtO7DVcCTO1ZC/zsO/DOoajzbsenpn76PR0JykeNcu8u3YvNG2sD9NoUFAtw9bzJK1/PaYNhOL1sF9EUBVqUE9aZYGbp1nqLuhgsBdF5YwzZ2yGX2bKIUnVMvyLnUiZMN1Sr/siglUqsmXRvtQPD/GAVrgr74DvfWcuXk6TnLl4csHtK61abSGJwsBwlvdovq/Rrrm4wfqXqJ801l3+EGUXJtaOO+ghDw4M5aTo3Qwcsf9gkwj9kZE+eljxTL7irxwxmlWU="
+    secure: "N3PnEXHeJXAJn3XDnX6Qx8dZVPRx9/ovDHDnBJTPb/QUneOmlwJfrKyxW4e4R3PDFSTIeYWZPa7oPBYg
+             yX/JUORjfHyqAyiH4QJ3RhaIYFytC+i2x82OqKvYCzkwepekad2azxlI+40XekZcWdp2hB2N/eY7L+4Mx8JJ2F1BRZc
+             qx8TLPqZcPcqj0ld2Btz9GZZ/5itK5SDTRzHMzg72LWlEgZn8h5hTH2Sc92nuAp1V0FRNGN49UaklCJlXPZzhV+zB4g
+             wpBhd+fRyT/bghlcAhl2J7ylantoDysdqZwIH5PlVEVWuiQKIGQ0ZfNWaMOu//uFszQ8G00lXe72BZYDzO+lYE4ZqZM
+             A3e7lxUq2QuYiAsY6Jmyk3rhZD+dOtQ74ivcgNIEcn/6jwxYfwYfPdAqDEQRY9GUgUApFcfgUm/1t+7ErqBRWbpdqBV
+             rFtQySx6ZhMtQ/o5Et7yZ/hOkWC2YnrGTsAeEyxjiOYWf7qngkN4UtzUINyTcTqM6lI8XB+0o0LiHVCkzSkhUU6mDcC
+             WKJWCi4o6raVClbwD9vNHG45fu85WW8GDkJWVZF4K1hcVRLsR/uo6FZ0jQWcR0Ye5bb2QF0W+LX1YyuMAYLuxA42Og/
+             aAWbGtSxN077wWz0ZIUmgg2SCR1VUljyHSoSVi8yaae4pX0y5nJmq/QBM="
 branches:
   only:
     - master
