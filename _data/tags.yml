@@ -1,0 +1,20 @@
+jekyll :
+  name: jekyll
+  description: False
+  cover: assets/built/images/blog-cover.jpg
+python :
+  name: python
+  description: False
+  cover: assets/built/images/blog-cover.jpg
+java :
+  name: java
+  description: False
+  cover: assets/built/images/blog-cover.jpg
+algorithm :
+  name: algorithm
+  description: False
+  cover: assets/built/images/blog-cover.jpg
+datastructure :
+  name: datastructure
+  description: False
+  cover: assets/built/images/blog-cover.jpg
